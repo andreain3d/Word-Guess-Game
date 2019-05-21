@@ -4,10 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <title>Word Guess Game</title>
   </head>
   <body>
     <script src="assets/js/script.js"></script>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <div class="main">
+            <img id="pusheen" src="assets/images/pusheen.gif" />
+            <h1>PUSHEEN WORD GUESS</h1>
+            <h3>Try to complete the word before running out of lives!</h3>
+            <h2><span class="mysteryWord"></span></h2>
+            <h3>Lives: <span class="lives"></span></h3>
+            <h3>Letters Guessed: <span class="lettersGuessed"></span></h3>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
   </body>
 </html>

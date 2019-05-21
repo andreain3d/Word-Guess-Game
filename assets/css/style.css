@@ -1,3 +1,22 @@
 body {
   background-image: url("../images/bg.jpg");
 }
+
+.main {
+  background: #ffffff;
+  border: solid 5px #726761;
+  border-radius: 30px;
+  margin-top: 20%;
+}
+
+#pusheen {
+  float: left;
+  height: 300px;
+  width: 300px;
+}
+
+h1 {
+  text-align: center;
+  color: #b2e1d9;
+  font-family: "Fredoka One", Helvetica, sans-serif;
+}
