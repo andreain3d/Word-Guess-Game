@@ -18,7 +18,7 @@
     <title>Word Guess Game</title>
   </head>
   <body>
-    <script src="assets/js/script.js"></script>
+
     <div class="container">
       <div class="row">
         <div class="col-md-1"></div>
@@ -36,14 +36,14 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10" id="wordContainer">
-                    <h2>_ _ _ _ _ _<span class="mysteryWord"></span></h2>
+                    <h2><span id="mysteryWord"></span></h2>
                 </div>
                 <div class="col-md-1"></div>
             </div>
             <div class="row">
                 <div class="col-md-7">
-                    <h3>Lives: <span class="lives"></span></h3>
-                    <h3>Letters Guessed: <span class="lettersGuessed"></span></h3>
+                    <h3>Lives: <span id="lives"></span></h3>
+                    <h3>Letters Guessed: <span id="lettersGuessed"></span></h3>
                     <div id="refresh-btn">
                         <p id="refresh">PLAY AGAIN</p>
                     </div>
@@ -57,5 +57,6 @@
         <div class="col-md-1"></div>
       </div>
     </div>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
