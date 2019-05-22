@@ -16,8 +16,12 @@ var wordBank = [
 var game = function() {
   mysteryWord = wordBank[Math.floor(Math.random() * wordBank.length)];
   console.log(mysteryWord);
+  var mysteryWordArray = [];
   for (i = 0; i < mysteryWord.length; i++) {
-    document.getElementById("mysteryWord").append("_ ");
+    mysteryWordArray.push("_ ");
+  }
+  for (i = 0; i < mysteryWordArray.length; i++) {
+    document.getElementById("mysteryWord").append(mysteryWordArray[i]);
   }
 
   //record userChoice, compare userChoice to letters in the word
@@ -30,7 +34,21 @@ var game = function() {
     }
     //reveal letters that match, subtract lives for letters that don't match
     if (mysteryWord.indexOf(userChoice.toUpperCase()) >= 0) {
-      console.log(mysteryWord.indexOf(userChoice.toUpperCase()));
+      guessIndex = mysteryWord.indexOf(userChoice.toUpperCase());
+      mysteryWordArray[guessIndex] = userChoice.toUpperCase() + " ";
+      document.getElementById("mysteryWord").textContent = "";
+      for (i = 0; i < mysteryWordArray.length; i++) {
+        document.getElementById("mysteryWord").append(mysteryWordArray[i]);
+      }
+      //      var mysteryWordContent = "";
+      //      for (i = 0; i < guessIndex; i++) {
+      //        mysteryWordContent += "_ ";
+      //      }
+      //      mysteryWordContent += userChoice.toUpperCase() + " ";
+      //      for (i = guessIndex + 1; i < mysteryWord.length; i++) {
+      //        mysteryWordContent += "_ ";
+      //      }
+      //      document.getElementById("mysteryWord").textContent = mysteryWordContent;
     } else {
       lives = lives - 1;
       document.getElementById("lives").textContent = lives;
