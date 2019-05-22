@@ -21,18 +21,40 @@
     <script src="assets/js/script.js"></script>
     <div class="container">
       <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
           <div class="main">
-            <img id="pusheen" src="assets/images/pusheen.gif" />
-            <h1>PUSHEEN WORD GUESS</h1>
-            <h3>Try to complete the word before running out of lives!</h3>
-            <h2><span class="mysteryWord"></span></h2>
-            <h3>Lives: <span class="lives"></span></h3>
-            <h3>Letters Guessed: <span class="lettersGuessed"></span></h3>
+            <div class="row">
+              <div class="col-md-3">
+                <img id="pusheen" src="assets/images/pusheen.gif" />
+              </div>
+              <div class="col-md-9">
+                <h1>PUSHEEN WORD GUESS</h1>
+              </div>
+            </div>
+            <h4>Try to complete the word before running out of lives!</h3>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10" id="wordContainer">
+                    <h2>_ _ _ _ _ _<span class="mysteryWord"></span></h2>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <h3>Lives: <span class="lives"></span></h3>
+                    <h3>Letters Guessed: <span class="lettersGuessed"></span></h3>
+                    <div id="refresh-btn">
+                        <p id="refresh">PLAY AGAIN</p>
+                    </div>
+                </div>
+                <div class="col-md-5 d-flex">
+                    <img id="stormy" class="ml-auto" src="assets/images/stormy.gif">
+                </div>
+            </div>
           </div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-1"></div>
       </div>
     </div>
   </body>

@@ -7,16 +7,75 @@ body {
   border: solid 5px #726761;
   border-radius: 30px;
   margin-top: 20%;
+  /*height: 375px;*/
+  padding: 0px 20px 0px 20px;
 }
 
 #pusheen {
-  float: left;
-  height: 300px;
-  width: 300px;
+  margin-top: -150px;
+  height: 250px;
+  width: 250px;
 }
 
 h1 {
   text-align: center;
   color: #b2e1d9;
   font-family: "Fredoka One", Helvetica, sans-serif;
+  margin-top: 50px;
+}
+
+h4 {
+  color: #726761;
+  font-family: "Open Sans", helvetica, sans-serif;
+  text-align: center;
+  font-weight: 800;
+  margin-top: 20px;
+}
+
+#wordContainer {
+  background: #efb2bf;
+  border-radius: 30px;
+  height: 100px;
+  padding: 10px;
+}
+
+h2 {
+  color: #ffffff;
+  font-family: "Fredoka One", Helvetica, sans-serif;
+  text-align: center;
+  font-size: 3em;
+}
+
+h3 {
+  margin-top: 20px;
+  font-family: "Fredoka One", Helvetica, sans-serif;
+}
+
+#stormy {
+  height: 150px;
+  width: 150px;
+  margin-top: 20px;
+}
+
+#refresh {
+  text-align: center;
+}
+
+#refresh-btn {
+  background: #b2e1d9;
+  color: #ffffff;
+  font-family: "Open Sans", helvetica, sans-serif;
+  font-weight: 800;
+  width: 120px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 10px;
+  float: right;
+}
+
+#refresh-btn:hover {
+  background: #efcf8f;
+}
+
+@media screen and (max-width: 993px) {
 }
