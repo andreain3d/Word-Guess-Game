@@ -1,5 +1,5 @@
 //on startup, set initial lives counter, show it on the document, and establish the word bank
-var lives = 10;
+var lives = 9;
 document.getElementById("lives").textContent = lives;
 var wordBank = [
   "PIZZA",
@@ -9,9 +9,13 @@ var wordBank = [
   "DONUTS",
   "STORMY",
   "FLOOF",
-  "TOEBEANS"
+  "TOEBEANS",
+  "BALLOONS",
+  "CUPCAKES",
+  "ICECREAM"
 ];
 
+//create function to find each index of a search item in a string and push to an array
 function getIndicesOf(searchStr, str) {
   var searchStrLen = searchStr.length;
   if (searchStrLen == 0) {
@@ -43,7 +47,7 @@ var game = function() {
     document.getElementById("mysteryWord").append(mysteryWordArray[i]);
   }
 
-  //checks if userChoice is a repeat guess, records it, compares userChoice to letters in the word
+  //checks if userChoice is a repeat guess, records it
   var lettersGuessed = [];
   document.onkeypress = function() {
     var userChoice = event.key;
@@ -51,11 +55,10 @@ var game = function() {
       document.getElementById("lettersGuessed").append(userChoice);
       lettersGuessed.push(userChoice.toUpperCase());
     }
-    //reveals letters that match **can't handle double leters right now**, subtracts lives for letters that don't match
+    //compares userChoice to letters in the word, reveals letters that match, subtracts lives for letters that don't match
 
     if (mysteryWord.indexOf(userChoice.toUpperCase()) >= 0) {
       guessIndices = getIndicesOf(userChoice.toUpperCase(), mysteryWord);
-      //mysteryWord.indexOf(userChoice.toUpperCase());
       for (x = 0; x < guessIndices.length; x++) {
         var guessIndex = guessIndices[x];
         mysteryWordArray[guessIndex] = userChoice.toUpperCase() + " ";
@@ -73,10 +76,17 @@ var game = function() {
     if (lives <= 0) {
       //losing pop-up reveal?
       //restarts game on button click
+      setTimeout(function() {
+        alert("You Lose!");
+      }, 250);
     }
-    if (mysteryWordArray.indexOf("_ ") < 0) {
+    //if no more blanks are left, user wins
+    if (document.getElementById("mysteryWord").innerText.indexOf("_") < 0) {
       //winning pop-up
       //restarts game on button click
+      setTimeout(function() {
+        alert("You win!");
+      }, 250);
     }
   };
   //restarts game at any time on button click
