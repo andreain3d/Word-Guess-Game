@@ -36,7 +36,9 @@ function getIndicesOf(searchStr, str) {
 //
 // randomly picks a word from the word bank and inserts the appropriate
 //number of underscores in mysteryWord field
+
 var game = function() {
+  var mysteryWord = "";
   mysteryWord = wordBank[Math.floor(Math.random() * wordBank.length)];
   console.log(mysteryWord);
   var mysteryWordArray = [];
@@ -77,20 +79,58 @@ var game = function() {
       //losing pop-up reveal?
       //restarts game on button click
       setTimeout(function() {
-        alert("You Lose!");
-      }, 250);
+        document.getElementById("lossScreen").style.display = "block";
+        document.getElementById("pusheen").style.display = "none";
+      }, 500);
     }
     //if no more blanks are left, user wins
     if (document.getElementById("mysteryWord").innerText.indexOf("_") < 0) {
       //winning pop-up
       //restarts game on button click
       setTimeout(function() {
-        alert("You win!");
-      }, 250);
+        document.getElementById("winScreen").style.display = "block";
+        document.getElementById("pusheen").style.display = "none";
+      }, 500);
     }
   };
-  //restarts game at any time on button click
+};
+
+//restarts game at any time on button click
+var newGame = function() {
+  document.getElementById("btn1").addEventListener("click", function() {
+    document.getElementById("winScreen").style.display = "none";
+    document.getElementById("lossScreen").style.display = "none";
+    document.getElementById("pusheen").style.display = "block";
+    document.getElementById("mysteryWord").textContent = "";
+    document.getElementById("lettersGuessed").textContent = "";
+    document.getElementById("lives").textContent = 9;
+    lives = 9;
+    game();
+  });
+
+  document.getElementById("btn2").addEventListener("click", function() {
+    document.getElementById("winScreen").style.display = "none";
+    document.getElementById("lossScreen").style.display = "none";
+    document.getElementById("pusheen").style.display = "block";
+    document.getElementById("mysteryWord").textContent = "";
+    document.getElementById("lettersGuessed").textContent = "";
+    document.getElementById("lives").textContent = 9;
+    lives = 9;
+    game();
+  });
+
+  document.getElementById("btn3").addEventListener("click", function() {
+    document.getElementById("winScreen").style.display = "none";
+    document.getElementById("lossScreen").style.display = "none";
+    document.getElementById("pusheen").style.display = "block";
+    document.getElementById("mysteryWord").textContent = "";
+    document.getElementById("lettersGuessed").textContent = "";
+    document.getElementById("lives").textContent = 9;
+    lives = 9;
+    game();
+  });
 };
 
 //call function
+newGame();
 game();

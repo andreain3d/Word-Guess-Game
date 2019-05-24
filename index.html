@@ -18,6 +18,45 @@
     <title>Word Guess Game</title>
   </head>
   <body>
+    <div id="winScreen">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-3">
+                    <img class="imgSize" src="assets/images/celebrationpusheen.gif">
+                </div>
+                <div class="col-md-5">
+                    <h1 class="endScreens">YOU WON!</h1>
+<!--                    <a href="index.html">-->
+                            <div class="refresh-btn" id="btn1">
+                                 <p class="refresh">PLAY AGAIN</p>
+                             </div>
+<!--                        </a>--> 
+                </div>
+                <div class="col-md-4">
+                    <img class="imgSize" src="assets/images/celebrationstormy.gif">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="lossScreen">
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-md-3">
+                        <img class="imgSize" src="assets/images/ghostpusheen.gif">
+                    </div>
+                    <div class="col-md-5">
+                        <h1>You ran out of lives. :(</h1>
+                           <div class="refresh-btn" id="btn2">
+                                <p class="refresh">PLAY AGAIN</p>
+                            </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="imgSize" src="assets/images/ghoststormy.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <div class="container">
       <div class="row">
@@ -44,9 +83,9 @@
                 <div class="col-md-7">
                     <h3>Lives: <span id="lives"></span></h3>
                     <h3>Letters Guessed: <span id="lettersGuessed"></span></h3>
-                    <div id="refresh-btn">
-                        <p id="refresh">PLAY AGAIN</p>
-                    </div>
+                            <div class="refresh-btn" id="btn3">
+                                 <p class="refresh">PLAY AGAIN</p>
+                             </div>
                 </div>
                 <div class="col-md-5 d-flex">
                     <img id="stormy" class="ml-auto" src="assets/images/stormy.gif">
