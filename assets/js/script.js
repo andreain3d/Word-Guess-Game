@@ -56,22 +56,22 @@ var game = function() {
     if (lettersGuessed.indexOf(userChoice.toUpperCase()) < 0) {
       document.getElementById("lettersGuessed").append(userChoice);
       lettersGuessed.push(userChoice.toUpperCase());
-    }
-    //compares userChoice to letters in the word, reveals letters that match, subtracts lives for letters that don't match
 
-    if (mysteryWord.indexOf(userChoice.toUpperCase()) >= 0) {
-      guessIndices = getIndicesOf(userChoice.toUpperCase(), mysteryWord);
-      for (x = 0; x < guessIndices.length; x++) {
-        var guessIndex = guessIndices[x];
-        mysteryWordArray[guessIndex] = userChoice.toUpperCase() + " ";
-        document.getElementById("mysteryWord").textContent = "";
-        for (i = 0; i < mysteryWordArray.length; i++) {
-          document.getElementById("mysteryWord").append(mysteryWordArray[i]);
+      //compares userChoice to letters in the word, reveals letters that match, subtracts lives for letters that don't match
+      if (mysteryWord.indexOf(userChoice.toUpperCase()) >= 0) {
+        guessIndices = getIndicesOf(userChoice.toUpperCase(), mysteryWord);
+        for (x = 0; x < guessIndices.length; x++) {
+          var guessIndex = guessIndices[x];
+          mysteryWordArray[guessIndex] = userChoice.toUpperCase() + " ";
+          document.getElementById("mysteryWord").textContent = "";
+          for (i = 0; i < mysteryWordArray.length; i++) {
+            document.getElementById("mysteryWord").append(mysteryWordArray[i]);
+          }
         }
+      } else {
+        lives = lives - 1;
+        document.getElementById("lives").textContent = lives;
       }
-    } else {
-      lives = lives - 1;
-      document.getElementById("lives").textContent = lives;
     }
 
     //if lives reach zero, ends game
