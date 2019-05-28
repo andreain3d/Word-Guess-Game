@@ -76,7 +76,7 @@ var game = function() {
 
     //if lives reach zero, ends game
     if (lives <= 0) {
-      //losing pop-up reveal?
+      //losing pop-up reveal
       //restarts game on button click
       setTimeout(function() {
         document.getElementById("lossScreen").style.display = "block";
@@ -85,7 +85,7 @@ var game = function() {
     }
     //if no more blanks are left, user wins
     if (document.getElementById("mysteryWord").innerText.indexOf("_") < 0) {
-      //winning pop-up
+      //winning pop-up reveal
       //restarts game on button click
       setTimeout(function() {
         document.getElementById("winScreen").style.display = "block";
